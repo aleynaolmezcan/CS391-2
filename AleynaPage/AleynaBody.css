@@ -1,0 +1,45 @@
+#aleynaBody {
+    background-color: rgb(78, 45, 45);
+    text-align: center;
+    color: white;
+}
+
+#info {
+    top: 50%;
+    color: white;
+    font-size: 18px;
+}
+
+#aleynaimg {
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 85px;
+}
+
+#social {
+    letter-spacing: 20px;        
+}
+
+#social>a:hover {
+    opacity: 0.8;
+}
+
+.fab {
+    width: 30px;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
+
+#ContactButton {
+    background-color:rgb(78, 45, 45);
+    border:2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+}

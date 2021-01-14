@@ -1,0 +1,48 @@
+#submitButton {
+    background-color:rgb(78, 45, 45);
+    border:2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 150px;
+}
+
+.pop-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    width: 500px;
+    height: 400px;
+    background-color: rgb(119, 61, 61);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+}
+
+input{
+    width: 50%;
+    display: block;
+    margin: 2px auto;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

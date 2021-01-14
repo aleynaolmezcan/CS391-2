@@ -1,0 +1,28 @@
+#AleynaFooter{
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+    background-color: rgb(53, 30, 30);
+    display: block;
+    margin-top: -16px;
+    margin-bottom: -11px;
+    margin-left: -11px;
+    width: 101.3%;
+    height: 150px;
+    bottom :0 ;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+}
+p.footer-text 
+{
+    color: #fff;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+img.footerimg 
+{
+    margin: auto;
+    border: none;
+    border-radius: none;
+}
