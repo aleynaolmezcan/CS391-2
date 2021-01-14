@@ -1,0 +1,22 @@
+
+#esadFooter {
+            box-shadow: 0 2px 8px 2px rgb(255, 255, 255);
+            display: block;
+            color: rgb(255, 141, 0);
+            background-color: rgb(255, 141, 0);
+            ;
+            font-size: 12px;
+            text-align: auto;
+            width: 101.3%;
+            margin-bottom: -11px;
+            margin-left: -11px;
+            margin-top: -20px
+}
+
+        .esad-footer-text {
+            font-weight: bold;
+            font-style: italic;
+            color: black;
+            font-size: 16px;
+            text-align: center;
+        }
