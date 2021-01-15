@@ -1,0 +1,40 @@
+#abdüBody
+{   
+    text-align: center;
+    font-family: "Helvetica Neue";
+    background-color:rgb(40, 105, 85);
+    color: white;
+    display: block;
+    font-size: 18px;  
+    margin: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    background-color:rgb(40, 105, 85);
+    color: white;
+}
+
+
+#github{
+    color : white;
+    text-decoration:none;
+    margin-right: 10px;
+}
+
+#abdüP
+{
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 225px;
+    margin-right: 225px;
+    color: white;
+}
+
+#abdü
+{
+    display: block;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 100%;
+}
+
