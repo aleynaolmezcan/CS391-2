@@ -1,0 +1,86 @@
+#burcuBody{
+    margin:0;
+    padding:0;
+    background-color:rgba(7, 3, 59, 0.9);
+}
+
+
+.box{
+    
+    background:rgba(0,0,0,0.3);
+    width:450px;
+    padding:40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#burcula{
+    border-radius: 100%;
+    border: 5px solid rgb(212, 0, 124);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box h1{
+    font-size: 40px;
+    font-weight: 100;
+}
+.box h2{
+    font-size: 25px;
+    font-weight: 100;
+    font-style: italic;
+    color:rgb(212, 0, 124);
+}
+.box p{
+    text-align:center;
+}
+.box ul{
+    margin:0;
+    padding:0;
+}
+.box li{
+    display: inline-block;
+    margin: 6px;
+
+}
+.box li a{
+    color:white;
+    text-decoration: none;
+    font-size: 40px;
+    transition: all ease-in-out 250 ms;
+}
+.box a:hover {
+    color: rgb(212, 0, 124);
+}
+
+.button{
+    background-color:rgba(7, 3, 59, 0.9);
+    border:2px solid rgb(212, 0, 124);
+    border-radius: 5px;
+    text-decoration:underline ;
+    padding: 5px 25px;
+    color: white;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.box h3{
+    color: rgb(212, 0, 124);
+}
+
+.box input{
+    width: 50%;
+    display: block;
+    margin: 2px auto;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
