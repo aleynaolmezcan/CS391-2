@@ -10,6 +10,7 @@ import React, { Component } from 'react';
 
 import { Container, Row, Col, Table } from 'reactstrap';
 
+
 import Abdullah from './Components/AbdullahPage/Abdullah';
 import Home from './Components/HomePage/Home';
 import Aleyna from './Components/AleynaPage/Aleyna';

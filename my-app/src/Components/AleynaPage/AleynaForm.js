@@ -1,11 +1,12 @@
 import React from 'react';
 import './AleynaForm.css';
 
-
  
 
 class AleynaForm extends React.Component{
+
     
+
     render(){
         return <div class="pop-form">
                     <button id="ContactButton" onClick = {popUP} class="aleynaButton">Contact Form</button> <br/><br/><br/>

@@ -1,0 +1,69 @@
+#container {
+    background-color: rgb(255, 255, 255);
+    background-image: url('../../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    text-align: center;
+    float: center;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: 50px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: grid;
+  }
+
+#aleynaimg{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 122px;
+}
+
+#ozgeimg{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 122px;
+}
+
+#burcuimg{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 122px;
+}
+
+#abduimg{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 122px;
+}
+
+#esadimg{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 122px;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+#esmahocaimg{
+    margin: auto;
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    margin-top: 122px;
+}

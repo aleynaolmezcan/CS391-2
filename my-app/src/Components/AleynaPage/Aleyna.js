@@ -5,6 +5,11 @@ import AleynaFooter from './AleynaFooter';
 
 
 class Aleyna extends React.Component{
+
+    componentDidMount() {
+        document.body.style.backgroundColor = "#4E2D2D";
+      }
+
     render(){
         return <body>
                     <header>

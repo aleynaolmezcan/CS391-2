@@ -1,4 +1,4 @@
-#submitButton {
+#aleynaSubmitButton {
     background-color:rgb(78, 45, 45);
     border:2px solid white;
     border-radius: 30px;
@@ -10,7 +10,18 @@
     margin-bottom: 150px;
 }
 
-.pop-form {
+#ContactButton {
+    background-color:rgb(78, 45, 45);
+    border:2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.aleynaPop-form {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
@@ -22,7 +33,7 @@
     align-items: center;
 }
 
-.form-content {
+.aleynaPop-form-content{
     width: 500px;
     height: 400px;
     background-color: rgb(119, 61, 61);
@@ -32,10 +43,105 @@
     border-radius: 4px;
 }
 
-input{
+.aleynaInput{
     width: 50%;
     display: block;
     margin: 2px auto;
+}
+
+.aleynaClose{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+  .popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);
+  }
+.form {
+    background-color: black(0, 0, 0, 0.8);
+    text-decoration-color: rgb(212, 0, 124);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form a:hover {
+    color: rgb(212, 0, 124);
+}
+.form-control {
+    color:rgb(212, 0, 124);
+  }
+.form-input {
+    background-color: rgba(7, 3, 59, 0.9);
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;   
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.form {
+    background-color: black(0, 0, 0, 0.8);
+    text-decoration-color: rgb(212, 0, 124);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form a:hover {
+    color: rgb(212, 0, 124);
+}
+.form-control {
+    color:rgb(212, 0, 124);
+  }
+.form-input {
+    background-color: rgba(7, 3, 59, 0.9);
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;   
 }
 
 .close{
