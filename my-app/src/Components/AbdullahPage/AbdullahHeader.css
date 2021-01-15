@@ -1,0 +1,18 @@
+#abdüHeader 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    background-color: rgb(14, 78, 59);
+    height: 85px;
+    text-align: center;
+    box-shadow: 0 2px 8px 2px rgb(5, 46, 34);
+}
+#headerimgAbdullah
+{
+    margin: auto;
+    border: none;
+    border-radius: none;
+}
