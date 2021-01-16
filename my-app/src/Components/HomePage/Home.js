@@ -21,15 +21,11 @@ import './Home.css'
                       <header>
                       <HomeHeader/>
                       </header>
-                      
                       <Table/>
-                    
                       <footer>
                       <HomeFooter/>
-                      </footer>
-                      
+                      </footer>     
                 </body>
-    
     }
 }
 

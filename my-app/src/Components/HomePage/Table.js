@@ -5,7 +5,7 @@ import burcuLogo from '../../images/brcula.jpg';
 import esadLogo from '../../images/esad.jpg';
 import abdüLogo from '../../images/abdullah.jpg';
 import  './HomeBody.css';
-import 'bootstrap/dist/css/bootstrap.css'; 
+
 
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
@@ -31,9 +31,6 @@ const Table = () => {
             </Container>
         </div>
     
-
-
-        
     );
 }
 
