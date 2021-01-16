@@ -1,5 +1,4 @@
-body{
-   
+#burcuBody{
     margin:0;
     padding:0;
     background-color:rgba(7, 3, 59, 0.9);
@@ -16,13 +15,12 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .form a:hover {
     color: rgb(212, 0, 124);
 }
 .form-control {
     color:rgb(212, 0, 124);
-  }
+}
 .form-input {
     background-color: rgba(7, 3, 59, 0.9);
     width: 500px;
@@ -31,15 +29,6 @@ body{
     padding: 20px;
     position: relative;
     border-radius: 4px;   
-}
-h3{
-    color: rgb(212, 0, 124);
-}
-
-input{
-    width: 50%;
-    display: block;
-    margin: 2px auto;
 }
 
 .close{
