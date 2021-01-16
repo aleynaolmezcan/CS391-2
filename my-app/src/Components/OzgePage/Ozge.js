@@ -5,6 +5,12 @@ import OzgeForm from './OzgeForm';
 import OzgeFooter from './OzgeFooter';
 
 export default class Ozge extends React.Component{
+
+    componentDidMount() {
+        document.body.style.backgroundColor = "#000000";
+      }
+
+
     render(){
         return <body>
                     <header>

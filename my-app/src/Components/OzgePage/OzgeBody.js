@@ -2,49 +2,89 @@ import React from 'react';
 import './OzgeBody.css';
 import logo from '../../images/ozge.JPG';
 
+class Popup extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            name: "",
+            surname:"",
+            email:"",
+            phoneNumber:"",
+            message:"",
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit = e => {
+        const {name, surname, email, phoneNumber, message} = this.state;
+
+        alert(name);
+        alert(surname);
+        alert(email);
+        alert(phoneNumber);
+        alert(message)
+
+        var student = {
+            "firstname": name,
+            "surname": surname,
+            "email": email,
+            "phoneNumber": phoneNumber,
+            "message": message
+        }
+        localStorage.setItem(student.email,JSON.stringify(student));
+    }
+
+
+
+    render() {
+      return (
+        <div className='popup'>
+          <div className='popup_inner'>
+          <form action="">
+                        <h3>Contact Form</h3>
+                        <label for="name"><b>Name</b></label>
+                        <input class = "ozgeInput" type="text" id= "name"  onChange={evt => this.setState({ name: evt.target.value})} placeholder="Name" name="name" required/>
+
+                        <label for="surname"><b>Surname</b></label>
+                        <input class = "ozgeInput" type="text" id= "surname"  onChange={evt => this.setState({ surname: evt.target.value})} placeholder="Surname" name="surname" required/>
+
+                        <label for="email"><b>Email</b></label>
+                        <input class = "ozgeInput" type="text" id= "email"  onChange={evt => this.setState({ email: evt.target.value})} placeholder="Email" name="email" required/>
+
+                        <label for="phone"><b>Phone Number</b></label>
+                        <input class = "ozgeInput" type="text" id= "phone"  onChange={evt => this.setState({ phoneNumber: evt.target.value})} placeholder="Phone Number" name="phone" required/>
+
+                        <label for="message"><b>Message</b></label>
+                        <input class = "ozgeInput" type="text" id= "message" onChange={evt => this.setState({ message: evt.target.value})} placeholder="Your Message" name="message" required/>
+
+                        
+                        <button type="submit" class="ozgeButton" id="submitButton" onClick= {this.handleSubmit}>Submit</button>
+                        <button type="submit" class="ozgeButton" id="submitButton" onClick={this.props.closePopup}>Close</button>
+
+            </form>
+            </div>
+            </div>
+      );
+    }
+  }
 
 
 class OzgeBody extends React.Component {
 
-    constructor(props){
-        super(props);
+    constructor() {
+        super();
+        this.state = {
+          showPopup: false
+        };
+      }
+      togglePopup() {
+        this.setState({
+          showPopup: !this.state.showPopup
+        });
+      }
 
-        this.buttonPressed = this.buttonPressed.bind(this);
-    }
 
-    buttonPressed = () => {
-
-        
-           return <form action="">
-                        <h3>Contact Form</h3>
-                        <label for="name"><b>Name</b></label>
-                        <input class = "ozgeInput" type="text" id= "name" placeholder="Name" name="name" required/>
-
-                        <label for="surname"><b>Surname</b></label>
-                        <input class = "ozgeInput" type="text" id= "surname" placeholder="Surname" name="surname" required/>
-
-                        <label for="email"><b>Email</b></label>
-                        <input class = "ozgeInput" type="text" id= "email" placeholder="Email" name="email" required/>
-
-                        <label for="phone"><b>Phone Number</b></label>
-                        <input class = "ozgeInput" type="text" id= "phone" placeholder="Phone Number" name="phone" required/>
-
-                        <label for="message"><b>Message</b></label>
-                        <input class = "ozgeInput" type="text" id= "message" placeholder="Your Message" name="message" required/>
-
-                        
-                        <button type="submit" class="ozgeButton" id="submitButton" >Submit</button>
-                </form>
-        
-
-       
-
-    };
-
-    
-
-    
     render() {
         return <div id = "ozgeBody">
                  <div id="info">
@@ -68,8 +108,12 @@ class OzgeBody extends React.Component {
                 </div>
 
                 <br/><br/>
-                <button id="button" onClick = {this.buttonPressed} class="ozgeButton"/ >Contact Form
-                <br/><br/>
+
+                <div>
+                        <button class ="ozgeButton" onClick={this.togglePopup.bind(this)}>Contact Form</button>
+                        {this.state.showPopup ? 
+                        <Popup text='Close Me'closePopup={this.togglePopup.bind(this)}/>: null}
+                </div>
 
                 
 
@@ -78,7 +122,7 @@ class OzgeBody extends React.Component {
 
                     
 
-            <br/>
+            <br/><br/><br/><br/>
 
                 </div>
             
