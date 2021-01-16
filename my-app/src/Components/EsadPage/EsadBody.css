@@ -1,9 +1,9 @@
 #esadBody {
-    background-color: rgb(255, 141, 0);
     text-align: center;
-    background-image: url(../../images/backGroundEsad.png);
+    background-color: rgb(153, 90, 107);
     background-repeat: no-repeat;
     background-size: cover;
+    height: '100%vh',
 }
 
 #esadBody {
