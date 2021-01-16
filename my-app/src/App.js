@@ -17,6 +17,7 @@ import Aleyna from './Components/AleynaPage/Aleyna';
 import Burcu from './Components/BurcuPage/Burcu';
 import Ozge from  './Components/OzgePage/Ozge';
 import Esad from "./Components/EsadPage/Esad";
+import Esma from "./Components/EsmaHocaPage/Esma";
 
 
 
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route exact path="/Ozge" component = {Ozge}>
         <Ozge/>  
+        </Route>
+        <Route exact path="/Esma" component = {Esma}>
+        <Esma/>  
         </Route>
     </Router>
     
