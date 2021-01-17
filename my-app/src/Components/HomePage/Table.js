@@ -19,7 +19,7 @@ const Table = () => {
             <Container> 
                 <Row className = "row" >
                     <Col className = "column" md="4"  lg="3"><a href= "/Aleyna"><img style={{animation: `spin 15s linear infinite`}}id = "aleynaimg" src={aleynaLogo} alt="Aleyna" width="250" height="250" /></a>Aleyna Ölmezcan</Col>
-                    <Col className = "column" md="4"  lg="3"><a href= "/Esma"><img id = "esmahocaimg" src={esmaLogo} alt="Esma Hoca" width="250" height="250" /></a>Esma Meral</Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Esma"><img id = "esmahocaimg" src={esmaLogo} alt="Esma" width="250" height="250" /></a>Esma Meral</Col>
                     <Col className = "column" md="4"  lg="3"><a href= "/Burcu"><img style={{animation: `spin 15s linear infinite`}} id = "burcuimg" src={burcuLogo} alt="Burcu" width="250" height="250" /></a>Burcu Arslan</Col>
                     <Col className = "column" md="4"  lg="3"><a href= "/Abdullah"><img style={{animation: `spin 15s linear infinite`}} id = "abduimg" src={abdüLogo} alt="Abdullah" width="250" height="250" /></a>Abdullah Saydemir</Col>
                     <Col className = "column" md="4"  lg="3"><a href= "/Esad"><img style={{animation: `spin 15s linear infinite`}} id = "esadimg" src={esadLogo} alt="Esad" width="250" height="250" /></a>Esad Simitcioğlu</Col>
