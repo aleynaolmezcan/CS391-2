@@ -13,20 +13,17 @@ import { Container, Row, Col } from 'reactstrap';
 const Table = () => {
 
     
-
     return (
 
         <div id = "container">
             <Container> 
                 <Row className = "row" >
-                    <Col className = "column" md="2"  lg="2"><a href= "/Aleyna"><img style={{animation: `spin 15s linear infinite`}}id = "aleynaimg" src={aleynaLogo} alt="Aleyna" width="250" height="250" /></a></Col>
-                    <Col className = "column" md="2"  lg="2"><a href= "/Esma"><img id = "esmahocaimg" src={esmaLogo} alt="Esma" width="250" height="250" /></a></Col>
-                    <Col className = "column" md="2"  lg="2"><a href= "/Burcu"><img style={{animation: `spin 15s linear infinite`}} id = "burcuimg" src={burcuLogo} alt="Burcu" width="250" height="250" /></a></Col>
-                </Row>
-                <Row class = "row" >
-                    <Col className = "column" md="4"  lg="2"><a href= "/Abdullah"><img style={{animation: `spin 15s linear infinite`}} id = "abduimg" src={abdüLogo} alt="Abdullah" width="250" height="250" /></a></Col>
-                    <Col className = "column" md="4"  lg="2"><a href= "/Esad"><img style={{animation: `spin 15s linear infinite`}} id = "esadimg" src={esadLogo} alt="Esad" width="250" height="250" /></a></Col>
-                    <Col className = "column" md="4"  lg="2"><a href= "/Ozge"><img style={{animation: `spin 15s linear infinite`}} id = "ozgeimg" src={özgeLogo} alt="Özge" width="250" height="250" /></a></Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Aleyna"><img style={{animation: `spin 15s linear infinite`}}id = "aleynaimg" src={aleynaLogo} alt="Aleyna" width="250" height="250" /></a></Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Esma"><img id = "esmahocaimg" src={esmaLogo} alt="Esma" width="250" height="250" /></a></Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Burcu"><img style={{animation: `spin 15s linear infinite`}} id = "burcuimg" src={burcuLogo} alt="Burcu" width="250" height="250" /></a></Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Abdullah"><img style={{animation: `spin 15s linear infinite`}} id = "abduimg" src={abdüLogo} alt="Abdullah" width="250" height="250" /></a></Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Esad"><img style={{animation: `spin 15s linear infinite`}} id = "esadimg" src={esadLogo} alt="Esad" width="250" height="250" /></a></Col>
+                    <Col className = "column" md="4"  lg="3"><a href= "/Ozge"><img style={{animation: `spin 15s linear infinite`}} id = "ozgeimg" src={özgeLogo} alt="Özge" width="250" height="250" /></a></Col>
                 </Row>
             </Container>
         </div>

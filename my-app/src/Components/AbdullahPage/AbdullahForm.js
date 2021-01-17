@@ -83,20 +83,20 @@ class AbdullahForm extends React.Component{
                     <form id ="action-form">
 
                             <label for="name" className ="inplabel"><b>Name</b></label><br/>
-                            <input type="text" className="input" onChange={evt => this.setState({ name: evt.target.value})} id="name" maxlength="20" pattern="^[A-Za-z -]+$" required />
+                            <input type="text" className="input" onChange={evt => this.setState({ name: evt.target.value})} id="name" minlength="3" maxlength="25" pattern="^[A-Za-z -]+$" required />
                             <br/><br/>
 
                             <label for="surname" className="inplabel"><b>Surname</b></label><br/>
-                            <input type="text" className="input" onChange={evt => this.setState({ surname: evt.target.value})} id="surname"  maxlength="20" pattern="^[A-Za-z -]+$" required/> <br/><br/>
+                            <input type="text" className="input" onChange={evt => this.setState({ surname: evt.target.value})} id="surname" minlength="3" maxlength="25" pattern="^[A-Za-z -]+$" required/> <br/><br/>
 
                             <label for="email" className="inplabel"><b>Email</b></label><br/>
-                            <input type="email" className="input" onChange={evt => this.setState({ email: evt.target.value})} id="email"  required/> <br/><br/>
+                            <input type="email" className="input" onChange={evt => this.setState({ email: evt.target.value})} id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/> <br/><br/>
 
                             <label for="phoneNumber" className="inplabel"><b>Phone Number</b></label><br/>
-                            <input type="text" className="input" onChange={evt => this.setState({ phoneNumber: evt.target.value})} id="phoneNumber"  required/> <br/><br/>
+                            <input type="tel" className="input" onChange={evt => this.setState({ phoneNumber: evt.target.value})} id="phoneNumber" minlength="10" pattern="^\d*$" required/> <br/><br/>
 
                             <label for="message" className="inplabel"><b>Message</b></label><br/>
-                            <textarea type="text" className="input" onChange={evt => this.setState({ message: evt.target.value})} id="message"  maxlength="1000" name="message" required></textarea>
+                            <textarea type="text" className="input" onChange={evt => this.setState({ message: evt.target.value})} id="message" maxlength="1000" name="message" required></textarea>
                             <br/><br/>
 
                             
