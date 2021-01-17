@@ -19,19 +19,12 @@ class AbdullahForm extends React.Component{
     handleValidation(){
       let formIsValid = true;
 
-<<<<<<< HEAD
       if(typeof this.state.name == "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
-=======
-      if(typeof this.state.name !== "undefined"){
-         if(/[^a-zA-ZğüşiöçĞÜŞİÖÇ]/.test(this.state.name)){
->>>>>>> fb45df4d9e767c4885419da7fdc776f5918293f2
             formIsValid = false;
          }        
       }
-
       
- 
        if(typeof this.state.surname !== "undefined"){
           if(/[^a-zA-ZğüşiöçĞÜŞİÖÇ]/.test(this.state.surname)){
              formIsValid = false;
@@ -59,14 +52,12 @@ class AbdullahForm extends React.Component{
  }
 
     contactSubmit(e){
-      
       e.preventDefault();
       if(this.handleValidation()){
         alert("Form submitted");
       }else{
         alert("Form has errors.")
       }
-
     }
 
     handleSubmit = e => {
@@ -83,8 +74,6 @@ class AbdullahForm extends React.Component{
             "message": message
         }
         localStorage.setItem(student['primary key'],JSON.stringify(student));
-
-        
 
     }
 
