@@ -19,7 +19,7 @@ class AbdullahForm extends React.Component{
       let formIsValid = true;
 
       if(typeof this.state.name !== "undefined"){
-         if(/[^a-zA-Z]/.test(this.state.name)){
+         if(/[^a-zA-ZğüşiöçĞÜŞİÖÇ]/.test(this.state.name)){
             formIsValid = false;
          }        
       }
@@ -27,14 +27,14 @@ class AbdullahForm extends React.Component{
       
  
        if(typeof this.state.surname !== "undefined"){
-          if(/[^a-zA-Z]/.test(this.state.surname)){
+          if(/[^a-zA-ZğüşiöçĞÜŞİÖÇ]/.test(this.state.surname)){
              formIsValid = false;
           }        
        }
  
       
 
-      if(typeof this.state.email !== "undefined"){
+      if(typeof this.state.email !== "undefined"){ // double check email
          let lastAtPos =this.state.email.lastIndexOf('@');
          let lastDotPos = this.state.email.lastIndexOf('.');
 
@@ -43,8 +43,8 @@ class AbdullahForm extends React.Component{
           }
      } 
  
-       if(typeof this.state.phoneNumber !== "undefined"){
-          if(!(/[^a-zA-Z]/.test(this.state.phoneNumber))){
+       if(typeof this.state.phoneNumber !== "undefined"){  // double check tel
+          if(!(/[^a-zA-ZğüşiöçĞÜŞİÖÇ]]/.test(this.state.phoneNumber))){
              formIsValid = false;
           }        
        }
@@ -77,7 +77,6 @@ class AbdullahForm extends React.Component{
     }
 
 
-   
     render(){
         return  <div className = "message-form">
                     <form id ="action-form" onSubmit={this.contactSubmit.bind(this)}>
@@ -98,8 +97,6 @@ class AbdullahForm extends React.Component{
                             <label for="message" className="inplabel"><b>Message</b></label><br/>
                             <textarea type="text" className="input" onChange={evt => this.setState({ message: evt.target.value})} id="message" maxlength="1000" name="message" required></textarea>
                             <br/><br/>
-
-                            
 
                             <button type="submit" className="abdüButton" onClick= {this.handleSubmit} >Submit</button>
                             <br/><br/>
