@@ -51,7 +51,7 @@ class Popup extends React.Component {
       <div className='popup'>
         <div className='popup_inner'>
           <h3>&hearts;Leave a Message&hearts;</h3>
-          <form>
+          <form onSubmit={this.contactSubmit.bind(this)}>
             <label for="name" ><b>Name&hearts;</b></label>
             <input type="text" id="name" onChange={evt => this.setState({ name: evt.target.value })} placeholder="Enter Your Name" name="name" required></input>
 

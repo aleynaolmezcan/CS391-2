@@ -97,7 +97,7 @@ class OzgeBody extends React.Component {
 
 
     render() {
-        return <div id = "ozgeBody">
+        return <div id = "ozgeBody" >
                  <div id="info">
                     <br/> <br/> <br/>
                     <img id = "ozgeImg" alt="Ozge" src= {logo} width="200" height="200"/>
