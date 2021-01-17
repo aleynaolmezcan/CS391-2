@@ -9,7 +9,7 @@ Visual Studio Code IDE, Google Chrome and Firefox web browsers are used for the 
 
 | Member | Responsibilites |
 | ------- | ----- |
-| Özge Yılgür | Creation of personal page and contribution to the homepage. |
+| Özge Yılgür | Divided the HTML and CSS codes in the first project in order to make js files. Updated and designed pop-up forms. Creation of personal page and contribution to the homepage. |
 | Burcu Arslan | Creation of personal page and contribution to the homepage. |
 | Aleyna Ölmezcan | Dividing the HTML files of my own page in the first project and creating a component. Restructuring the pages in accordance with the project and fixing problems such as the information in the form was not storing in a single object. Designing pop-up forms. I also contributed to the Readme.md file. |
 | Abdullah Saydemir | Firstly divided my HTML files from the first project and created components out of them. Made necessary naming and structural changes in the JavaScript and CSS files to have good and clear view. I also took part in responsive design of the HomePage. I also contributed to Readme.md file |
