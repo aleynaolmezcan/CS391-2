@@ -66,6 +66,8 @@ Step 7: Run `npm start`
 
 Following CSS file is used only to get social media icons. No other library aside is used except for required ones.
 
+This CSS file is included to index.html and used in each individual's page.
+
 * https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## Usage Scenarios
