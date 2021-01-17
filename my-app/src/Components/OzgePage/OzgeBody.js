@@ -1,90 +1,52 @@
 import React from 'react';
 import './OzgeBody.css';
 import logo from '../../images/ozge.JPG';
+import handleValidation from '../../utils.js';
 
 
 
 class Popup extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            name: "",
-            surname:"",
-            email:"",
-            phoneNumber:"",
-            message:"",
-            primaryKey:0
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      surname: "",
+      email: "",
+      phoneNumber: "",
+      message: "",
+      primaryKey: 0
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  contactSubmit(e) {
+    e.preventDefault();
+    if (handleValidation(this.state.name, this.state.surname, this.state.email, this.state.phoneNumber)) {
+      alert("Form submitted");
+    } else {
+      alert("Form has errors.")
     }
+  }
 
-    handleValidation(){
-      let formIsValid = true;
+  handleSubmit = e => {
+    const { name, surname, email, phoneNumber, message } = this.state;
 
-      if(typeof this.state.name !== "undefined"){
-         if(/[^a-zA-Z]/.test(this.state.name)){
-            formIsValid = false;
-         }        
-      }
+    const randomValue = Math.floor((Math.random() * 100) + 1);
 
-      
- 
-       if(typeof this.state.surname !== "undefined"){
-          if(/[^a-zA-Z]/.test(this.state.surname)){
-             formIsValid = false;
-          }        
-       }
- 
-      
 
-      if(typeof this.state.email !== "undefined"){
-         let lastAtPos =this.state.email.lastIndexOf('@');
-         let lastDotPos = this.state.email.lastIndexOf('.');
-
-         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && (this.state.email).indexOf('@@') == -1 && lastDotPos > 2 && ((this.state.email).length - lastDotPos) > 2)) {
-            formIsValid = false;
-          }
-     } 
- 
-       if(typeof this.state.phoneNumber !== "undefined"){
-          if(!(/[^a-zA-Z]/.test(this.state.phoneNumber))){
-             formIsValid = false;
-          }        
-       }
-
-     return formIsValid;
- }
-
-    contactSubmit(e){
-      
-      e.preventDefault();
-      if(this.handleValidation()){
-        alert("Form submitted");
-      }else{
-        alert("Form has errors.")
-      }
+    var student = {
+      "primary key": randomValue,
+      "firstname": name,
+      "surname": surname,
+      "email": email,
+      "phoneNumber": phoneNumber,
+      "message": message
 
     }
+    localStorage.setItem(randomValue, JSON.stringify(student));
 
-    handleSubmit = e => {
-        const {name, surname, email, phoneNumber, message} = this.state;
-
-        const randomValue = Math.floor((Math.random() * 100) + 1);
-
-        var student = {
-            "primary key": randomValue,
-            "firstname": name,
-            "surname": surname,
-            "email": email,
-            "phoneNumber": phoneNumber,
-            "message": message
-        }
-        localStorage.setItem(student['primary key'],JSON.stringify(student));
-
-        
-
-    }
+  }
 
     render() {
       return (
