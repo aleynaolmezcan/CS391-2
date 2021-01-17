@@ -107,8 +107,9 @@ handleSubmit = e => {
                     <input type="text" id="msg"  onChange={evt => this.setState({ message: evt.target.value})} placeholder="Enter Your Message" name="msg" required maxlength="55"></input>
       
                    
-                    <button type="submit" class="button" id="submitButton" onClick= {this.handleSubmit} >&hearts;Submit&hearts;</button>
-                    <button type="submit" class="button" id="submitButton" onClick={this.props.closePopup}>&hearts;Close Me&hearts;</button>
+                    <button type="submit" class="button" onClick= {this.handleSubmit} >&hearts;Submit&hearts;</button> 
+                    <div class="divider"/>
+                    <button type="submit" class="button"  onClick={this.props.closePopup}>&hearts;Close Me&hearts;</button>
 
                     </form>
           </div>
@@ -141,9 +142,9 @@ class BurcuBody extends React.Component{
                                 <p id = "burcuP">Hi, my name is Burcu and I am a third year computer science student in Özyeğin University. I am especially interested in sound design and new age media.</p>
                                 
                                 <ul id = "burcuU1">
-                                    <a href="https://www.instagram.com/olmezcanaleyna" id = "github" class="fa fa-instagram fa-3x" ></a>
-                                    <a href="https://twitter.com/olmezcanaleyna" id = "github" class="fa fa-twitter fa-3x" ></a>
-                                    <a href="https://github.com/aleynaolmezcan" id = "github" class="fa fa-github fa-3x" ></a>
+                                    <a href="https://www.instagram.com/burcurnt/" id = "github" class="fa fa-instagram fa-3x" ></a>
+                                    <a href="https://twitter.com/k1rnoda" id = "github" class="fa fa-twitter fa-3x" ></a>
+                                    <a href="https://github.com/burcula" id = "github" class="fa fa-github fa-3x" ></a>
                                 </ul> 
 
                                 <div>

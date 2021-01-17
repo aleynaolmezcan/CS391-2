@@ -4,7 +4,6 @@
     background-color:rgba(7, 3, 59, 0.9);
 }
 
-
 .box{
     
     background:rgba(0,0,0,0.3);
@@ -51,7 +50,7 @@
     font-size: 40px;
     transition: all ease-in-out 250 ms;
 }
-.box a:hover {
+#burcuU1 a:hover {
     color: rgb(212, 0, 124);
 }
 
@@ -60,10 +59,15 @@
     border:2px solid rgb(212, 0, 124);
     border-radius: 5px;
     text-decoration:underline ;
-    padding: 5px 25px;
+    padding: 5px 15px;
     color: white;
-    margin-top: 40px;
+    margin-top: 10px;
     display: inline-block;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
 
 .box h3{
