@@ -100,7 +100,7 @@ class OzgeBody extends React.Component {
         return <div id = "ozgeBody">
                  <div id="info">
                     <br/> <br/> <br/>
-                    <img id = "ozgeImg" src= {logo} width="200" height="200"/>
+                    <img id = "ozgeImg" alt="Ozge" src= {logo} width="200" height="200"/>
                     <article>
                         <h1><b>Özge Yılgür</b></h1>
                         <h2><i>Fake it till you make it</i></h2>

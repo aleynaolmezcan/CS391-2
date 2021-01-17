@@ -95,7 +95,7 @@ class AleynaBody extends React.Component {
   render() {
     return <div id="aleynaBody">
       <br /><br />
-      <img id="aleynaimg" src={logo} width="200" height="200" />
+      <img id="aleynaimg" alt="Aleyna" src={logo} width="200" height="200" />
       <article>
         <h1><b>Aleyna Ölmezcan</b></h1>
         <h2><i>9 September 1999</i></h2>
