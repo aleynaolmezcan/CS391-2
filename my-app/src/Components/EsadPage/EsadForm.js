@@ -16,6 +16,7 @@ class EsadForm extends React.Component {
             email:"",
             phoneNumber:"",
             message:"",
+            primaryKey:0
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -23,18 +24,21 @@ class EsadForm extends React.Component {
     handleValidation(){
       let formIsValid = true;
 
-      if(typeof this.state.name !== "undefined"){
+      if(typeof this.state.name == "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
             formIsValid = false;
          }        
       }
 
+      
+ 
        if(typeof this.state.surname !== "undefined"){
           if(/[^a-zA-Z]/.test(this.state.surname)){
              formIsValid = false;
           }        
        }
  
+      
 
       if(typeof this.state.email !== "undefined"){
          let lastAtPos =this.state.email.lastIndexOf('@');
@@ -68,16 +72,21 @@ class EsadForm extends React.Component {
     handleSubmit = e => {
         const {name, surname, email, phoneNumber, message} = this.state;
 
+        const randomValue = Math.floor((Math.random() * 100) + 1);
+
         var student = {
+            "primary key": randomValue,
             "firstname": name,
             "surname": surname,
             "email": email,
             "phoneNumber": phoneNumber,
             "message": message
         }
-        localStorage.setItem(student.email,JSON.stringify(student));
-    }
+        localStorage.setItem(student['primary key'],JSON.stringify(student));
 
+        
+
+    }
 
 
 

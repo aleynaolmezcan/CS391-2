@@ -11,6 +11,7 @@ class AbdullahForm extends React.Component{
             email:"",
             phoneNumber:"",
             message:"",
+            primaryKey:0
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -18,7 +19,7 @@ class AbdullahForm extends React.Component{
     handleValidation(){
       let formIsValid = true;
 
-      if(typeof this.state.name !== "undefined"){
+      if(typeof this.state.name == "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
             formIsValid = false;
          }        
@@ -58,7 +59,7 @@ class AbdullahForm extends React.Component{
       if(this.handleValidation()){
         alert("Form submitted");
       }else{
-        alert("Please fill all the fields in proper format. Types are; \nName : Alphabetic \nSurname : Alphabetic \nEmail : characters@character.domain \nTel : Numeric \nMessage : any")
+        alert("Form has errors.")
       }
 
     }
@@ -66,14 +67,20 @@ class AbdullahForm extends React.Component{
     handleSubmit = e => {
         const {name, surname, email, phoneNumber, message} = this.state;
 
+        const randomValue = Math.floor((Math.random() * 100) + 1);
+
         var student = {
+            "primary key": randomValue,
             "firstname": name,
             "surname": surname,
             "email": email,
             "phoneNumber": phoneNumber,
             "message": message
         }
-        localStorage.setItem(student.email,JSON.stringify(student));
+        localStorage.setItem(student['primary key'],JSON.stringify(student));
+
+        
+
     }
 
 

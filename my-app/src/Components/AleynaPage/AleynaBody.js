@@ -12,6 +12,7 @@ class Popup extends React.Component {
         email:"",
         phoneNumber:"",
         message:"",
+        primaryKey:0
     };
     this.handleSubmit = this.handleSubmit.bind(this);
 }
@@ -19,10 +20,8 @@ class Popup extends React.Component {
 handleValidation(){
   let formIsValid = true;
 
-  if(typeof this.state.name !== "undefined"){
-    alert("burcu")
+  if(typeof this.state.name == "undefined"){
      if(/[^a-zA-Z]/.test(this.state.name)){
-        alert("özge")  
         formIsValid = false;
      }        
   }
@@ -32,7 +31,6 @@ handleValidation(){
    if(typeof this.state.surname !== "undefined"){
       if(/[^a-zA-Z]/.test(this.state.surname)){
          formIsValid = false;
-         alert("esat")
       }        
    }
 
@@ -44,14 +42,12 @@ handleValidation(){
 
      if (!(lastAtPos < lastDotPos && lastAtPos > 0 && (this.state.email).indexOf('@@') == -1 && lastDotPos > 2 && ((this.state.email).length - lastDotPos) > 2)) {
         formIsValid = false;
-        alert("esat2")
       }
  } 
 
    if(typeof this.state.phoneNumber !== "undefined"){
       if(!(/[^a-zA-Z]/.test(this.state.phoneNumber))){
          formIsValid = false;
-         alert("esat3")
       }        
    }
 
@@ -72,14 +68,20 @@ contactSubmit(e){
 handleSubmit = e => {
     const {name, surname, email, phoneNumber, message} = this.state;
 
+    const randomValue = Math.floor((Math.random() * 100) + 1);
+
     var student = {
+        "primary key": randomValue,
         "firstname": name,
         "surname": surname,
         "email": email,
         "phoneNumber": phoneNumber,
         "message": message
     }
-    localStorage.setItem(student.email,JSON.stringify(student));
+    localStorage.setItem(student['primary key'],JSON.stringify(student));
+
+    
+
 }
 
     render() {
