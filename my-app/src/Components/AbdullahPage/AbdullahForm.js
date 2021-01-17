@@ -12,8 +12,55 @@ class AbdullahForm extends React.Component{
             phoneNumber:"",
             message:"",
         };
-
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleValidation(){
+      let formIsValid = true;
+
+      if(typeof this.state.name == "undefined"){
+         if(/[^a-zA-Z]/.test(this.state.name)){
+            formIsValid = false;
+         }        
+      }
+
+      
+ 
+       if(typeof this.state.surname !== "undefined"){
+          if(/[^a-zA-Z]/.test(this.state.surname)){
+             formIsValid = false;
+          }        
+       }
+ 
+      
+
+      if(typeof this.state.email !== "undefined"){
+         let lastAtPos =this.state.email.lastIndexOf('@');
+         let lastDotPos = this.state.email.lastIndexOf('.');
+
+         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && (this.state.email).indexOf('@@') == -1 && lastDotPos > 2 && ((this.state.email).length - lastDotPos) > 2)) {
+            formIsValid = false;
+          }
+     } 
+ 
+       if(typeof this.state.phoneNumber !== "undefined"){
+          if(!(/[^a-zA-Z]/.test(this.state.phoneNumber))){
+             formIsValid = false;
+          }        
+       }
+
+     return formIsValid;
+ }
+
+    contactSubmit(e){
+      
+      e.preventDefault();
+      if(this.handleValidation()){
+        alert("Form submitted");
+      }else{
+        alert("Form has errors.")
+      }
+
     }
 
     handleSubmit = e => {

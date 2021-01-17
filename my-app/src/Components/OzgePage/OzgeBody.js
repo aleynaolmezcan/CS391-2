@@ -2,6 +2,8 @@ import React from 'react';
 import './OzgeBody.css';
 import logo from '../../images/ozge.JPG';
 
+
+
 class Popup extends React.Component {
 
     constructor(props){
@@ -16,14 +18,56 @@ class Popup extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    handleValidation(){
+      let formIsValid = true;
+
+      if(typeof this.state.name == "undefined"){
+         if(/[^a-zA-Z]/.test(this.state.name)){
+            formIsValid = false;
+         }        
+      }
+
+      
+ 
+       if(typeof this.state.surname !== "undefined"){
+          if(/[^a-zA-Z]/.test(this.state.surname)){
+             formIsValid = falsee
+          }        
+       }
+ 
+      
+
+      if(typeof this.state.email !== "undefined"){
+         let lastAtPos =this.state.email.lastIndexOf('@');
+         let lastDotPos = this.state.email.lastIndexOf('.');
+
+         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && (this.state.email).indexOf('@@') == -1 && lastDotPos > 2 && ((this.state.email).length - lastDotPos) > 2)) {
+            formIsValid = false;
+          }
+     } 
+ 
+       if(typeof this.state.phoneNumber !== "undefined"){
+          if(!(/[^a-zA-Z]/.test(this.state.phoneNumber))){
+             formIsValid = false;
+          }        
+       }
+
+     return formIsValid;
+ }
+
+    contactSubmit(e){
+      
+      e.preventDefault();
+      if(this.handleValidation()){
+        alert("Form submitted");
+      }else{
+        alert("Form has errors.")
+      }
+
+    }
+
     handleSubmit = e => {
         const {name, surname, email, phoneNumber, message} = this.state;
-
-        alert(name);
-        alert(surname);
-        alert(email);
-        alert(phoneNumber);
-        alert(message)
 
         var student = {
             "firstname": name,
@@ -35,32 +79,30 @@ class Popup extends React.Component {
         localStorage.setItem(student.email,JSON.stringify(student));
     }
 
-
-
     render() {
       return (
         <div className='popup'>
           <div className='popup_inner'>
-          <form action="">
+          <form action="" onSubmit= {this.contactSubmit.bind(this)} >
                         <h3>Contact Form</h3>
-                        <label for="name"><b>Name</b></label>
-                        <input class = "ozgeInput" type="text" id= "name"  onChange={evt => this.setState({ name: evt.target.value})} placeholder="Name" name="name" required/>
+                        <label for="name"><b>Name (Use English Characters)</b></label>
+                        <input class = "ozgeInput" type="text" id= "name"  onChange={evt => this.setState({ name: evt.target.value})} placeholder="Name" name="name"  required/>
 
-                        <label for="surname"><b>Surname</b></label>
-                        <input class = "ozgeInput" type="text" id= "surname"  onChange={evt => this.setState({ surname: evt.target.value})} placeholder="Surname" name="surname" required/>
+                        <label for="surname"><b>Surname (Use English Characters)</b></label>
+                        <input class = "ozgeInput" type="text" id= "surname"  onChange={evt => this.setState({ surname: evt.target.value})} placeholder="Surname" name="surname"  required/>
 
-                        <label for="email"><b>Email</b></label>
-                        <input class = "ozgeInput" type="text" id= "email"  onChange={evt => this.setState({ email: evt.target.value})} placeholder="Email" name="email" required/>
+                        <label for="email"><b>Email (Use English Characters)</b></label>
+                        <input class = "ozgeInput" type="text" id= "email"  onChange={evt => this.setState({ email: evt.target.value})} placeholder="Email" name="email"  required/>
 
-                        <label for="phone"><b>Phone Number</b></label>
-                        <input class = "ozgeInput" type="text" id= "phone"  onChange={evt => this.setState({ phoneNumber: evt.target.value})} placeholder="Phone Number" name="phone" required/>
+                        <label for="phone"><b>Phone Number (Use English Characters)</b></label>
+                        <input class = "ozgeInput" type="text" id= "phone"  onChange={evt => this.setState({ phoneNumber: evt.target.value})} placeholder="Phone Number" name="phone"   required/>
 
                         <label for="message"><b>Message</b></label>
                         <input class = "ozgeInput" type="text" id= "message" onChange={evt => this.setState({ message: evt.target.value})} placeholder="Your Message" name="message" required/>
 
                         
-                        <button type="submit" class="ozgeButton" id="submitButton" onClick= {this.handleSubmit}>Submit</button>
-                        <button type="submit" class="ozgeButton" id="submitButton" onClick={this.props.closePopup}>Close</button>
+                        <button type="submit" class="ozgeButton" onClick= {this.handleSubmit}>Submit</button>
+                        <button type="submit" class="ozgeButton"  onClick={this.props.closePopup}>Close</button>
 
             </form>
             </div>
@@ -118,10 +160,7 @@ class OzgeBody extends React.Component {
                 
 
                 
-                       
-
-                    
-
+              
             <br/><br/><br/><br/>
 
                 </div>

@@ -4,31 +4,83 @@ import logo from '../../images/aleyna.jpg';
 
 class Popup extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            name: "",
-            surname:"",
-            email:"",
-            phoneNumber:"",
-            message:"",
-        };
+  constructor(props){
+    super(props);
+    this.state = {
+        name: "",
+        surname:"",
+        email:"",
+        phoneNumber:"",
+        message:"",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+}
 
-        this.handleSubmit = this.handleSubmit.bind(this);
+handleValidation(){
+  let formIsValid = true;
+
+  if(typeof this.state.name == "undefined"){
+    alert("burcu")
+     if(/[^a-zA-Z]/.test(this.state.name)){
+        alert("özge")  
+        formIsValid = false;
+     }        
+  }
+
+  
+
+   if(typeof this.state.surname !== "undefined"){
+      if(/[^a-zA-Z]/.test(this.state.surname)){
+         formIsValid = false;
+         alert("esat")
+      }        
+   }
+
+  
+
+  if(typeof this.state.email !== "undefined"){
+     let lastAtPos =this.state.email.lastIndexOf('@');
+     let lastDotPos = this.state.email.lastIndexOf('.');
+
+     if (!(lastAtPos < lastDotPos && lastAtPos > 0 && (this.state.email).indexOf('@@') == -1 && lastDotPos > 2 && ((this.state.email).length - lastDotPos) > 2)) {
+        formIsValid = false;
+        alert("esat2")
+      }
+ } 
+
+   if(typeof this.state.phoneNumber !== "undefined"){
+      if(!(/[^a-zA-Z]/.test(this.state.phoneNumber))){
+         formIsValid = false;
+         alert("esat3")
+      }        
+   }
+
+ return formIsValid;
+}
+
+contactSubmit(e){
+  
+  e.preventDefault();
+  if(this.handleValidation()){
+    alert("Form submitted");
+  }else{
+    alert("Form has errors.")
+  }
+
+}
+
+handleSubmit = e => {
+    const {name, surname, email, phoneNumber, message} = this.state;
+
+    var student = {
+        "firstname": name,
+        "surname": surname,
+        "email": email,
+        "phoneNumber": phoneNumber,
+        "message": message
     }
-
-    handleSubmit = e => {
-        const {name, surname, email, phoneNumber, message} = this.state;
-
-        var student = {
-            "firstname": name,
-            "surname": surname,
-            "email": email,
-            "phoneNumber": phoneNumber,
-            "message": message
-        }
-        localStorage.setItem(student.email,JSON.stringify(student));
-    }
+    localStorage.setItem(student.email,JSON.stringify(student));
+}
 
     render() {
       return (
