@@ -20,8 +20,10 @@ class EsadForm extends React.Component {
       };
       this.handleSubmit = this.handleSubmit.bind(this);
     }
+
   
     contactSubmit(e) {
+
       e.preventDefault();
       if (handleValidation(this.state.name, this.state.surname, this.state.email, this.state.phoneNumber)) {
         alert("Form submitted");

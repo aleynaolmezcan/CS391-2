@@ -31,6 +31,7 @@ class AbdullahForm extends React.Component {
 
     const randomValue = Math.floor((Math.random() * 100) + 1);
 
+
     var student = {
       "primary key": randomValue,
       "firstname": name,
@@ -38,6 +39,7 @@ class AbdullahForm extends React.Component {
       "email": email,
       "phoneNumber": phoneNumber,
       "message": message
+
     }
     localStorage.setItem(randomValue, JSON.stringify(student));
 
