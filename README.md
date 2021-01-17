@@ -13,7 +13,7 @@ Visual Studio Code IDE, Google Chrome and Firefox web browsers are used for the 
 | Burcu Arslan | Creation of personal page and contribution to the homepage. |
 | Aleyna Ölmezcan | Dividing the HTML files of my own page in the first project and creating a component. Restructuring the pages in accordance with the project and fixing problems such as the information in the form was not storing in a single object. Designing pop-up forms. I also contributed to the Readme.md file. |
 | Abdullah Saydemir | Firstly divided my HTML files from the first project and created components out of them. Made necessary naming and structural changes in the JavaScript and CSS files to have good and clear view. I also took part in responsive design of the HomePage. I also contributed to Readme.md file |
-| Esad Simitcioğlu | Creation of personal page and contribution to the homepage. |
+| Esad Simitcioğlu | Distribution of tasks within the group. Separating HTML files of the previous project and creating components. Fixing the problem of "Submit" button not working on pages with pop-up form. Prevent e-mails from overlapping in storage. Providing validation in forms. All responsibilities of his personal page. I also took part in responsive design of HomePage. |
 
 ## Instructions for running the project
 
