@@ -84,15 +84,13 @@ class EsadForm extends React.Component {
         }
         localStorage.setItem(student['primary key'],JSON.stringify(student));
 
-        
-
     }
 
 
 
     render() {
         return  <div id = "esadForm">
-                    <form>
+                    <form  onSubmit= {this.contactSubmit.bind(this)}>
                         <h1>Your Message</h1>
 
                         <label for="name" class="LabelTextField"><b>Name</b></label>

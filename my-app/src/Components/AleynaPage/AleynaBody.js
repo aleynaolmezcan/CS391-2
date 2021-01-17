@@ -88,7 +88,7 @@ handleSubmit = e => {
       return (
          <div class="aleynaPopup">
                     <div class="aleynaPopup_inner">
-                            <form action="">
+                            <form action=""  onSubmit= {this.contactSubmit.bind(this)}>
                                 <h3>Contact Form</h3>
                                 <label id = "aleynaLabel" for="name"><b>Name</b></label><b></b><br></br>
                                 <input type="text" id = "name" onChange={evt => this.setState({ name: evt.target.value})} placeholder="Enter Your Name" name="name" required/><br/>
