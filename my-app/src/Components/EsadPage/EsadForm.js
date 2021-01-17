@@ -1,7 +1,7 @@
 import React from 'react';
 import './EsadForm.css';
 
-
+import handleValidation from '../../utils.js';
 
 
 
@@ -11,81 +11,41 @@ class EsadForm extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
-         name: "",
-         surname: "",
-         email: "",
-         phoneNumber: "",
-         message: "",
-         primaryKey: 0
+        name: "",
+        surname: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+        primaryKey: 0
       };
       this.handleSubmit = this.handleSubmit.bind(this);
-   }
-
-   handleValidation() {
-      let formIsValid = true;
-
-      if (typeof this.state.name == "undefined") {
-         if (/[^a-zA-Z]/.test(this.state.name)) {
-            formIsValid = false;
-         }
-      }
-
-
-
-      if (typeof this.state.surname !== "undefined") {
-         if (/[^a-zA-Z]/.test(this.state.surname)) {
-            formIsValid = false;
-         }
-      }
-
-
-
-      if (typeof this.state.email !== "undefined") {
-         let lastAtPos = this.state.email.lastIndexOf('@');
-         let lastDotPos = this.state.email.lastIndexOf('.');
-
-         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && (this.state.email).indexOf('@@') == -1 && lastDotPos > 2 && ((this.state.email).length - lastDotPos) > 2)) {
-            formIsValid = false;
-         }
-      }
-
-      if (typeof this.state.phoneNumber !== "undefined") {
-         if (!(/[^a-zA-Z]/.test(this.state.phoneNumber))) {
-            formIsValid = false;
-         }
-      }
-
-      return formIsValid;
-   }
-
-   contactSubmit(e) {
-
+    }
+  
+    contactSubmit(e) {
       e.preventDefault();
-      if (this.handleValidation()) {
-         alert("Form submitted");
+      if (handleValidation(this.state.name, this.state.surname, this.state.email, this.state.phoneNumber)) {
+        alert("Form submitted");
       } else {
-         alert("Form has errors.")
+        alert("Form has errors.")
       }
-
-   }
-
-   handleSubmit = e => {
+    }
+  
+    handleSubmit = e => {
       const { name, surname, email, phoneNumber, message } = this.state;
-
+  
       const randomValue = Math.floor((Math.random() * 100) + 1);
-
+  
       var student = {
-         "primary key": randomValue,
-         "firstname": name,
-         "surname": surname,
-         "email": email,
-         "phoneNumber": phoneNumber,
-         "message": message
+        "primary key": randomValue,
+        "firstname": name,
+        "surname": surname,
+        "email": email,
+        "phoneNumber": phoneNumber,
+        "message": message
       }
-      localStorage.setItem(student['primary key'], JSON.stringify(student));
-
-   }
-
+      localStorage.setItem(randomValue, JSON.stringify(student));
+  
+    }
 
    render() {
       return <div id="esadForm">
@@ -97,6 +57,7 @@ class EsadForm extends React.Component {
 
             <label for="surname" class="LabelTextField"><b>Surname</b></label>
             <input type="text" onChange={evt => this.setState({ surname: evt.target.value })} placeholder="Enter Your Surname" id="inputSurname" class="TextField" name="surname" required />
+
 
             <label for="email" class="LabelTextField"><b>Email</b></label>
             <input type="text" onChange={evt => this.setState({ email: evt.target.value })} placeholder="Enter Your Email" id="inputEmail" class="TextField" name="email" required />

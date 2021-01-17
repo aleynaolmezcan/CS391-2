@@ -39,7 +39,7 @@ class AbdullahForm extends React.Component {
       "phoneNumber": phoneNumber,
       "message": message
     }
-    localStorage.setItem(student['primary key'], JSON.stringify(student));
+    localStorage.setItem(randomValue, JSON.stringify(student));
 
   }
 
