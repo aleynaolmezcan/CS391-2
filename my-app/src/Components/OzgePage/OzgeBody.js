@@ -21,7 +21,7 @@ class Popup extends React.Component {
     handleValidation(){
       let formIsValid = true;
 
-      if(typeof this.state.name == "undefined"){
+      if(typeof this.state.name !== "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
             formIsValid = false;
          }        
@@ -31,7 +31,7 @@ class Popup extends React.Component {
  
        if(typeof this.state.surname !== "undefined"){
           if(/[^a-zA-Z]/.test(this.state.surname)){
-             formIsValid = falsee
+             formIsValid = false
           }        
        }
  

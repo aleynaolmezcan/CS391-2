@@ -18,7 +18,7 @@ class AbdullahForm extends React.Component{
     handleValidation(){
       let formIsValid = true;
 
-      if(typeof this.state.name == "undefined"){
+      if(typeof this.state.name !== "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
             formIsValid = false;
          }        
@@ -58,7 +58,7 @@ class AbdullahForm extends React.Component{
       if(this.handleValidation()){
         alert("Form submitted");
       }else{
-        alert("Form has errors.")
+        alert("Please fill all the fields in proper format. Types are; \nName : Alphabetic \nSurname : Alphabetic \nEmail : characters@character.domain \nTel : Numeric \nMessage : any")
       }
 
     }
@@ -80,14 +80,14 @@ class AbdullahForm extends React.Component{
    
     render(){
         return  <div className = "message-form">
-                    <form id ="action-form">
+                    <form id ="action-form" onSubmit={this.contactSubmit.bind(this)}>
 
                             <label for="name" className ="inplabel"><b>Name</b></label><br/>
-                            <input type="text" className="input" onChange={evt => this.setState({ name: evt.target.value})} id="name" minlength="3" maxlength="25" pattern="^[A-Za-z -]+$" required />
+                            <input type="text" className="input" onChange={evt => this.setState({ name: evt.target.value})} id="name" minlength="3" maxlength="25" required />
                             <br/><br/>
 
                             <label for="surname" className="inplabel"><b>Surname</b></label><br/>
-                            <input type="text" className="input" onChange={evt => this.setState({ surname: evt.target.value})} id="surname" minlength="3" maxlength="25" pattern="^[A-Za-z -]+$" required/> <br/><br/>
+                            <input type="text" className="input" onChange={evt => this.setState({ surname: evt.target.value})} id="surname" minlength="3" maxlength="25" required/> <br/><br/>
 
                             <label for="email" className="inplabel"><b>Email</b></label><br/>
                             <input type="email" className="input" onChange={evt => this.setState({ email: evt.target.value})} id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/> <br/><br/>

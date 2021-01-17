@@ -23,7 +23,7 @@ class EsadForm extends React.Component {
     handleValidation(){
       let formIsValid = true;
 
-      if(typeof this.state.name == "undefined"){
+      if(typeof this.state.name !== "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
             formIsValid = false;
          }        
