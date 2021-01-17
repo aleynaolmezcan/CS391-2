@@ -24,7 +24,7 @@ class EsadForm extends React.Component {
     handleValidation(){
       let formIsValid = true;
 
-      if(typeof this.state.name == "undefined"){
+      if(typeof this.state.name !== "undefined"){
          if(/[^a-zA-Z]/.test(this.state.name)){
             formIsValid = false;
          }        
@@ -85,8 +85,6 @@ class EsadForm extends React.Component {
         localStorage.setItem(student['primary key'],JSON.stringify(student));
 
     }
-
-
 
     render() {
         return  <div id = "esadForm">
