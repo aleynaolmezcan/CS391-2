@@ -1,14 +1,9 @@
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  BrowserRouter
+  Route
 } from "react-router-dom";
 import React, { Component } from 'react';
-
-import { Container, Row, Col, Table } from 'reactstrap';
 
 
 import Abdullah from './Components/AbdullahPage/Abdullah';
